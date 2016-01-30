@@ -1,0 +1,276 @@
+@import "../base/animation";
+@import "../layout/site-vars";
+.site-menu {
+    min-height: 3em;
+    @include breakpoint($mob) {
+        @include span(1 of 1);
+    }
+    @include breakpoint($pad) {
+        @include span(1 at 2 of (1 2));
+        margin-top: .5em;
+    }
+    @include breakpoint($pc) {
+        @include span (5 at 4 last);
+    }
+}
+
+.menu-glavnoe-menyu {
+    @extend %clear-ul;
+    @extend %clearfix;
+    background-color: $col-I;
+    border-radius: 3px;
+    *zoom: 1;
+    @include breakpoint($mob) {
+        @include span(1 of 1);
+    }
+}
+
+.menu-item {
+    list-style: none;
+    position: relative;
+    display: block;
+    @extend %clearfix;   
+}
+.contacts {
+    @include breakpoint($pc) {
+        @include span (1 at 4 of (1 2 1 1));
+    }
+}
+.hero {
+    @include breakpoint($pc) {
+        @include span (1 at 1 of (1 2 1 1));
+    }
+}
+.jk {
+    @include breakpoint($pc) {
+        @include span (1 at 2 of (1 2 1 1));
+    }
+}
+.credit {
+    @include breakpoint($pc) {
+        @include span (1 at 3 of (1 2 1 1));
+    }
+}
+#hero-nav > .contacts > a:after{
+    content: "\e835"; 
+}
+#hero-nav > .hero > a:after{
+    content: "\e822" 
+}
+#hero-nav > .jk > a:after{
+    content: "\e801"; 
+}
+#hero-nav > .credit > a:after{
+    content: "\e84c"; 
+}
+#hero-nav > .menu-item > a {
+    @include breakpoint($mob) {
+        text-align: left;
+        padding-left: 1.4em;
+        padding-top: 1.2em;
+        font-size: 1em;
+    }
+    @include breakpoint($pad) {
+        text-align: left;
+        padding-left: 1.4em;
+        padding-top: 1.2em;
+        font-size: 1em;
+    }
+    @include breakpoint(790px 1084px) {
+        font-size: .8em;
+    }
+    background-color: $col-I;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $col-III;
+    font-family: 'e-bold',
+    tahoma,
+    arial;
+    font-size: 1em;
+    border: solid 2px transparent;
+    border-radius:3px;
+    @include trans(.3s);
+    &:after {
+        @include breakpoint($mob) {
+            float: right;
+            margin-right: 1.5em;
+            margin-top: -.2em;
+        }
+        @include breakpoint($pad) {
+            float: right;
+            margin-right: 1.5em;
+            margin-top: -.2em;
+        }
+        font-family: 'icon';
+        font-size: 1em;
+        position: relative;
+        color: lighten($col-I, 10%);
+        background-color: $col-III;
+        padding: .2em;
+        border: solid 1px lighten($col-I, 20%);
+        visibility: hidden;
+        display: none;
+    }
+    &:hover {
+        background-color: lighten($col-I, 5%);
+        @include trans(.3s);
+        border: solid 2px lighten($col-I, 10%);
+        @include breakpoint($pc) {
+            @include scale(1.1);
+        }
+        &:hover:after {
+            display: inline;
+            visibility: visible;
+            -webkit-animation: smallToBig 300ms ease;
+            -moz-animation: smallToBig 300ms ease;
+            -ms-animation: smallToBig 300ms ease;
+        }
+        &:active {
+            background-color: lighten($col-I, 10%);
+            border-color: lighten($col-I, 15%);
+            @include trans(.1s);
+        }
+        &:active:after {
+            background-color: lighten($col-I, 10%);
+            border-color: $col-II;
+            color: $col-III;
+            @include trans(.3s);
+        }
+    }
+}
+
+.parent-li {
+    &:before {
+        float: right;
+        font-size: 1.15em;
+        margin-top: .9em;
+        content: "\e888";
+        visibility: visible;
+        background-color: $col-I;
+        color: $col-III;
+        font-family: 'icon';
+        font-size: 1.2em;
+        position: relative;
+        margin-right: 1.5em;
+        @include breakpoint(790px 1084px) {
+            font-size: 1em;
+            margin-right: 3em;
+        }
+    }
+    &:hover:before {
+        margin: 0;
+        display: none;
+        -webkit-animation: bigToSmall 100ms ease;
+        -moz-animation: bigToSmall 100ms ease;
+        -ms-animation: bigToSmall 100ms ease;
+    }
+}
+
+.sub-menu {
+    @extend %clear-ul;
+    @extend %clearfix;
+    display: block;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.sub-menu-item {
+    border-bottom: solid 2px lighten($col-I, 10%);
+    &:last-cild {
+        border-bottom: none;
+    }
+}
+.sub-menu > .sub-menu-item > a {
+    @include breakpoint ($mob) {
+        padding: 1em 1.5em .8em;
+    }
+    @include breakpoint ($pad) {
+        padding: 1em 1.5em .8em;
+    }
+    border-radius: 3px;
+    border: solid 2px lighten($col-I, 10%);
+    z-index: 100;
+    position: relative;
+    color: $col-III;
+    background-color: lighten($col-I, 5%);
+    text-decoration: none;
+    display: block;
+    padding: .5em 1em;
+    @include trans(.3s);
+    font-size: 1.1em;
+    text-align: left;
+    &:before {
+        font-family: 'icon';
+        font-size: .9em;
+        content: '\e876';
+        position: relative;
+        margin-left: .3em;
+        left: -5%;
+        top: 0;
+        bottom: 0;
+    }
+    &:hover {
+        @include breakpoint ($pc) {
+            @include scale(1.1);
+        }
+        background-color: lighten($col-I, 10%);
+        @include trans(.3s);
+    }
+    span {
+        display: block;
+        width: 100%;
+        padding: .3em;
+        margin-top: .3em;
+        font-size: .9em;
+        background-color: $col-II;
+        color: $col-I;
+    }
+}
+
+
+a.toggle-menu {
+    @include breakpoint($mob) {
+        @include span(1 of 1);
+    }
+    border-radius: 3px;
+    display: none;
+    background-color: $col-IV;
+    padding: .7em 1em .5em;
+    color: $col-I;
+    font-size: 1.5em;
+    width: span(1 of 1);
+    position: relative;
+    text-decoration: none;
+    @include trans(.3s);
+    &:after {
+        content: "\e87e";
+        font-family: 'icon';
+        position: relative;
+        float: right;
+        /*@include trans(.3s);*/
+    }
+    &:hover {
+        background-color: $col-II;
+        color: $col-III;
+    }
+    &:hover:after {
+        content: "\e888";
+    }
+    &:active {
+        @include trans(.2s);
+        background-color: lighten($col-II, 10%);
+        color: $col-III;
+    }
+}
+
+a.toggle-menu.active {
+    @include trans(.3s);
+    color: $col-I;
+    &:after {
+        content: "\e880";
+    }
+}

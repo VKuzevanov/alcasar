@@ -1,0 +1,14 @@
+.site-wrap{
+    width: 100%;
+    background-color: $col-IV;
+    min-height: 100%;
+    margin: auto;
+    @extend %clearfix;
+    padding-bottom: 3em;
+}
+
+.content-wrap{
+    @extend .container;
+    padding: 1em;
+    @extend %clearfix;
+}

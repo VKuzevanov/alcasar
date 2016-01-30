@@ -1,0 +1,28 @@
+@import "../bower/susy/sass/susy";
+@import "../bower/compass-breakpoint/stylesheets/breakpoint";
+
+$susy: (
+    math: fluid,
+    output: float,
+    gutter-position: after,
+    container-position: center,
+    container: 80%,
+    columns: 8,
+    gutters: 1/10,
+    global-box-sizing: border-box,
+
+  debug: (
+    image: hide,
+    color: rgba(#66f, .2),
+    output: background,
+    toggle: top right,
+  )
+);
+
+.container{
+    @include container($susy);
+    max-width: 1170px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}

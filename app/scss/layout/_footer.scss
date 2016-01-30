@@ -1,0 +1,155 @@
+.footer-wrap{
+    margin-top: -3.5em;
+    height: 5em;
+    @include breakpoint ($mob){
+     margin-top: -3.5em;
+    height: 5.5em;   
+    }
+    @include breakpoint ($pad){
+     margin-top: -3.5em;
+    height: 8.5em;   
+    }
+    padding: .5em;
+    @extend .header-wrap;
+}
+.site-footer{
+    @extend .container;
+    color:$col-III;
+    font-size: .9em;
+    padding: .1em .5em;
+}
+
+.dev-info{  
+    @include span(2 at 8 first);
+    margin-top: 1em;
+    span{
+        color: $col-III;    
+    }
+    
+    
+    @include breakpoint ($mob){
+        @include span (1 of 1);
+        text-align: center;
+        margin-bottom: 1em;
+        display: none;
+       
+    }
+    @include breakpoint ($pad){
+        @include span (1 at 1 of (1 1));
+    }
+}
+
+.dev-link{
+    position: relative;
+    display: inline-block;
+    padding: .3em 2em .3em .3em;
+    background-color: $col-I;
+    color:$col-II;
+    text-decoration: none;
+    border-radius: 3px;
+    @include trans(.3s);
+    
+    &:after{
+          @include breakpoint ($mob){
+         visibility: visible;
+    }
+        visibility: hidden;
+        position: absolute;
+        font-family: 'icon';
+        content: '\e86b';
+        color:$col-III;
+        font-size: .8em;
+        padding: .3em;
+        right: 0.25em;
+        top: 0.25em; 
+        background-color: lighten($col-I, 10%);
+    }
+    &:hover{
+    background-color: $col-II;
+    color:$col-I;
+    text-decoration: none;
+    @include trans(.3s);
+    }
+    
+    &:hover:after{
+        visibility: visible;
+        -webkit-animation: smallToBig 300ms ease;
+        -moz-animation: smallToBig 300ms ease;
+        -ms-animation: smallToBig 300ms ease;
+    }
+    &:active{
+        background-color: $col-III;
+         @include trans(.3s)
+    }
+}
+.site-info{
+    
+    @include breakpoint ($mob){
+        @include span (1 of 1);
+        margin-bottom: 1em;
+        display: none;
+    }
+    @include breakpoint ($pad){
+        @include span (1 at 2 of (1 1));
+        margin-bottom: 1em;
+        text-align: right;
+    }
+    @include span(3 at 8);
+    text-align: center;
+    color:$col-III;
+    font-size: .9em;
+    margin-top: 1em;
+}
+.site-cont_list{
+    @include breakpoint ($mob){
+        @include span (1 of 1);
+    }
+    @include breakpoint ($pad){
+        @include span (full);
+    }
+    
+    @include span(3 at 8 last);
+    list-style: none;
+}
+.site-cont_item{
+    text-align: center;
+    
+    @include breakpoint ($pc){
+     text-align: right;
+    }
+}
+.site-cont_link{
+    color:$col-III;
+    text-decoration: none;
+   
+}
+.tel-footer{
+    @include breakpoint ($pad){
+      font-size: 1.5em;  
+        text-align: center;
+    }
+    font-size: 2em;
+    font-family: 'e-bold';
+    @include trans(.3s);
+    &:hover{
+        color:$col-II;
+        @include trans(.3s);
+    }
+}
+.address-footer{
+    position: relative;
+    @include trans(.3s);
+    &:before{
+        position: relative;
+        font-family: 'icon';
+        content: '\e833';
+    }
+    &:hover{
+        color: $col-II;
+        @include trans(.3s);
+    }
+    &:hover:before{
+        color: $col-II;
+        @include trans(.3s);
+    }
+}

@@ -1,0 +1,51 @@
+.header-wrap{
+    width: 100%;
+    margin: 0 auto;
+    background-color: $col-I;
+    padding: .5em 0;
+    min-height: 3.5em;
+    [rel="main"] {
+		padding-bottom: 3.5em;
+	}
+}
+.site-header{
+    @extend .container;
+    padding: 0.1em 0.5em;
+    
+    @include breakpoint ($pad){
+    max-height: 5em; 
+    }
+    
+}
+.logo-wrap{
+    text-align: center;
+    margin-bottom: 0;
+    @include span (1 at 1 first);
+    
+    
+     @include breakpoint($mob) {
+         @include span(1 of 1);
+         margin-bottom: 1em;
+    }
+    
+      @include breakpoint($pad) {
+         @include span(1 at 1 of (1 2));
+          margin-top: 0.2em;
+          margin-bottom: 1em;
+    }
+    
+    img{
+        display: block;
+        margin: 0 auto;
+        
+        @include breakpoint($pad) {
+            max-height: 4em;
+            
+        }
+    }
+    
+
+}
+.site-name{
+    @extend %descript;
+}
