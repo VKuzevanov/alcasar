@@ -66,3 +66,9 @@ var adjustMenu = function() {
 	$('#close_popup, .popup-bg').click(function (){
 		$('.popup-bg, .callback-wrap').css({'opacity':'0', 'visibility':'hidden', 'display':'none'});
 	});
+
+//показ модального окна отправить заказа
+	$('.open_modal').click(function (e){
+		e.preventDefault();
+		$('#contact_form_pop, .popup-bg').css({'opacity':'1', 'visibility':'visible', 'display':'block'});
+	});

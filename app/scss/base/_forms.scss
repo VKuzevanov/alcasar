@@ -4,8 +4,9 @@ select,
 textarea {
     min-height: 2.5em;
     border-radius: 3px;
-    padding:3px; 
+    padding:5px; 
     @include trans(0.3s);
+    border: solid 1px $col-I;
     &:focus {
         background-color: $col-III;
         @include trans(0.3s);
