@@ -49,7 +49,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "http://zag:8080",
+    proxy: "http://alcasar-sk.ru:8080",
     notify: false
     });
 });
@@ -69,10 +69,10 @@ gulp.task('sass', function () {
 gulp.task('css', function(){
 	return gulp.src('./app/scss/*.css')
 	.pipe(plumber(err))
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest('./app/css'))
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('./app/'))
 })
-//js
+////js
 //gulp.task('js', function () {
 // 
 // 	return gulp.src('./app/js/vendor/*.js')

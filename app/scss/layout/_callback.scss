@@ -1,0 +1,59 @@
+.callback-btn{
+    position: fixed;
+    right: 0;
+    top:40%;
+    background-color: $col-I;
+    padding: .5em;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    @include breakpoint ($mob){
+        width: 100%;
+        height: auto;
+        position: static;
+        border-top: solid 2px lighten($col-I, 5%);
+        padding: .5em;
+        background-color: darken($col-I, 5%);
+        border-radius: 0;
+    }
+}
+.callback-link{
+    font-family: 'e-bold';
+    position: relative;
+    margin: 0 auto;
+    color: $col-III;
+    padding: 0 .5em;
+    width: 36px;
+    height: 190px;
+    text-align: center;
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    writing-mode: tb-rl;
+    &:before{
+        background-color: $col-III;
+        color: $col-I;
+        position: relative;
+        content:'\e83f';
+        font-family: 'icon';
+        padding: .6em;
+        margin-bottom: .5em;
+        @include breakpoint ($mob){
+         margin-bottom: 0;   
+        }
+    }
+    &:hover{
+        text-decoration: none;
+    }
+    @include breakpoint ($mob){
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+        -moz-transform: none;
+        -webkit-transform: none;
+        -o-transform: none;
+        transform: none;
+        writing-mode:lr-tb;
+    }
+}

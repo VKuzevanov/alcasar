@@ -1,8 +1,7 @@
 {
-  "name": "alcasar"
-  },
+  "name": "alcasar",
   "devDependencies": {
-    "compass-breakpoint": "breakpoint-sass#~2.6.1",
-    "susy": "~2.2.5"
+    "susy": "~2.2.5",
+    "compass-breakpoint": "breakpoint-sass#~2.6.1"
   }
 }

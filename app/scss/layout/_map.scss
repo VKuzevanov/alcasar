@@ -1,0 +1,13 @@
+.map-wrap{
+    max-width: 1170px;
+    width: 60%;
+    @include breakpoint($pad){
+       width: 80%; 
+    }
+    @include breakpoint($mob){
+       width: 90%; 
+    }
+    input{
+        min-height:1em;
+    }
+}

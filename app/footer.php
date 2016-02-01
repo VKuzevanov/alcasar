@@ -32,6 +32,13 @@
                </ul>
             </footer>
         </div>
+        <div class="callback-btn">
+            <a href="#callback" class="callback-link">Перезвонить Вам?</a>
+        </div>
+        <div class="popup-bg">
+            <div id="close_popup"></div>
+            <?php include 'popup-callback.php';?>
+        </div>
        <!-- scripts after-->
         <?php wp_footer(); ?>                   
     </body>

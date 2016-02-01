@@ -62,3 +62,7 @@ var adjustMenu = function() {
 		});
 	}
 }
+    //закрытие модального окна
+	$('#close_popup, .popup-bg').click(function (){
+		$('.popup-bg, .callback-wrap').css({'opacity':'0', 'visibility':'hidden', 'display':'none'});
+	});

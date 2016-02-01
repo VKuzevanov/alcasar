@@ -41,7 +41,7 @@
 	   <p class="browserupgrade">Вы используете <strong>старый браузер</strong>. Пожалуйста <a href="http://browsehappy.com/">обновитьебраузер</a> для нормального отображения сайта!</p>
 	<![endif]-->
 	<!-- header -->
-    <?php include 'loader.php'; ?>
+    <?php include 'preloader.php'; ?>
         <div class="site-wrap">
             <!-- HEADER-->
               <div rel="main" class="header-wrap">

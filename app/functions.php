@@ -36,6 +36,8 @@ function my_load_scripts() {
 		wp_register_script( 'jquery-core', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array(), null, true ); // регистрируем крайнюю версию из гугла
 		add_filter( 'script_loader_src', 'jquery_local_loader', 10, 2 );  // вешаем на загрузку скрипта альтернативный jquery
 		wp_enqueue_script( 'jquery' );
+        wp_register_script('mod+respond',  get_template_directory_uri().'/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js');
+		wp_enqueue_script( 'mod+respond' );
 		wp_register_script('theme',  get_template_directory_uri().'/js/main.js');
 		wp_enqueue_script( 'theme' );
 	}	
@@ -86,9 +88,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 register_nav_menus( array(
 	'panel_menu' => 'Меню в топ панели',
 	'header_menu' => 'Меню в шапке',
-	'footer_menu_col-1' => 'Меню в подвале колонка 1',
-	'footer_menu_col-2' => 'Меню в подвале колонка 2',
-	'footer_menu_col-3' => 'Меню в подвале колонка 3'
 ));
 // удаляем контейнеры меню
 add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
