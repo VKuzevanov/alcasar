@@ -70,5 +70,5 @@ var adjustMenu = function() {
 //показ модального окна отправить заказа
 	$('.open_modal').click(function (e){
 		e.preventDefault();
-		$('#contact_form_pop, .popup-bg').css({'opacity':'1', 'visibility':'visible', 'display':'block'});
+		$('#contact_form_pop, .popup-bg, #close_popup').css({'opacity':'1', 'visibility':'visible', 'display':'block'});
 	});

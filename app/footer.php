@@ -35,8 +35,6 @@
         <div class="callback-btn">
             <a href="#callback" class="callback-link open_modal">Перезвонить Вам?</a>
         </div>
-        
-            <div id="close_popup" class="close-popup"></div>
             <?php include 'popup-callback.php';?>
         <div class="popup-bg"></div>
        <!-- scripts after-->

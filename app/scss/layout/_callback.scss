@@ -2,6 +2,8 @@
     position: fixed;
     right: 0;
     top:40%;
+    width: 3.3em;
+    height: 220px;
     @include breakpoint ($mp){
         position: static;
         width: 100%;
@@ -19,44 +21,45 @@
     display: block;
     margin: 0 auto;
     color: $col-III;
-    padding: .5em 1em;
-    width: 3.3em;
-    height: 220px;
-    text-align: center;
+    padding: .9em .7em .5em .5em;
+    width: 220px;
+    height: 3.3em;
+    margin-left: -84px;
+    margin-top: 84px;
+    text-align: right;
     border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border:solid 2px lighten($col-I,10%);
     
     @include trans(.3s);
     
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    writing-mode: tb-rl;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
     
     &:before{
         border-radius:3px;
         background-color: $col-III;
         color: $col-I;
-        position: relative;
+        position: absolute;
         content:'\e83f';
         font-family: 'icon';
         padding: .6em;
-        margin-bottom: .5em;
-        
+        //margin-right: .7em;
+        top:.4em;
+        left:.7em;
         @include trans(.3s);
         
         @include breakpoint ($mp){ 
-            margin-right: 1.5em;
+            position: relative;
+            margin-right: 1em;
+            top:0;
+            left: 0;
         }
     }
     &:hover{
         text-decoration: none;
-        border-color:lighten($col-I,10%);
-        background-color: lighten($col-I,5%);
-        border-right:5px solid $col-II;
-        width: calc(3.3em + 5px);
-        @include trans(.3s);
         
         &:before{
             background-color: $col-II;
@@ -65,9 +68,9 @@
     }
     
     @include breakpoint ($mp){
-        background-color: $col-I;
+        text-align: center;
+        margin-right: 1.5em;
         border-radius: 3px;
-        border: solid 2px lighten($col-I, 5%);
         display: block;
         margin: 0 auto;
         width: 100%;
