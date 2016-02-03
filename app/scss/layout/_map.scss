@@ -1,6 +1,26 @@
 .map-wrap{
     max-width: 1170px;
-    width: 60%;
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 3px;
+    opacity: 0;
+    position: fixed;
+    visibility: hidden;
+    text-align: justify;
+    top: 50%;
+    left: 50%;
+    z-index: 999999;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
     @include breakpoint($pad){
        width: 80%; 
     }

@@ -25,7 +25,7 @@
                        </a>
                    </li>
                    <li class="site-cont_item">
-                       <a href="#" class="site-cont_link address-footer">
+                       <a href="#" class="site-cont_link address-footer open_map">
                            г. Краснодар, ул. 40 лет Победы, 34,  офис 704.
                        </a>
                    </li>
@@ -36,8 +36,9 @@
             <a href="#callback" class="callback-link open_modal">Перезвонить Вам?</a>
         </div>
             <?php include 'popup-callback.php';?>
+            <?php include 'popup-map.php';?>
         <div class="popup-bg"></div>
        <!-- scripts after-->
-        <?php wp_footer(); ?>                   
+        <?php wp_footer(); ?>             
     </body>
 </html>

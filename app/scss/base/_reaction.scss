@@ -1,0 +1,27 @@
+div.el-hide{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+div.el-viz{
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+.nav-norm{
+    position: relative;
+}
+.nav-sticky{
+    position:fixed;
+    top:0; 
+    left:0;
+    width:100%;  
+    @include breakpoint ($mob){
+        .logo-wrap{
+            display: none;
+        }
+    }
+}
+.transbg{
+    background-color: $col-pop;
+}

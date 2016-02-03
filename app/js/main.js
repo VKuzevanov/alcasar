@@ -62,13 +62,64 @@ var adjustMenu = function() {
 		});
 	}
 }
+////закрытие модального окна
+//	$('#close_popup, .popup-bg').click(function (){
+//		$('.popup-bg, .callback-wrap, #yamaps').css({'opacity':'0', 'visibility':'hidden', 'display':'none'});
+//	});
+//
+////показ модального окна callback
+//	$('.open_modal').click(function (e){
+//		e.preventDefault();
+//		$('#contact_form_pop, .popup-bg, #close_popup').css({'opacity':'1', 'visibility':'visible', 'display':'block'});
+//	});
+//	$('.open_map').click(function (e){
+//		e.preventDefault();
+//		$('.popup-bg, #yamaps').css({'opacity':'1', 'visibility':'visible', 'display':'block'});
+//	});
     //закрытие модального окна
 	$('#close_popup, .popup-bg').click(function (){
-		$('.popup-bg, .callback-wrap').css({'opacity':'0', 'visibility':'hidden', 'display':'none'});
+		$('.popup-bg, .callback-wrap, #yamaps').removeClass('el-viz').addClass('el-hide');
 	});
 
-//показ модального окна отправить заказа
+//показ модального окна callback
 	$('.open_modal').click(function (e){
 		e.preventDefault();
-		$('#contact_form_pop, .popup-bg, #close_popup').css({'opacity':'1', 'visibility':'visible', 'display':'block'});
+		$('#contact_form_pop, .popup-bg, #close_popup').removeClass('el-hide').addClass('el-viz');
 	});
+	$('.open_map').click(function (e){
+		e.preventDefault();
+		$('.popup-bg, #yamaps').removeClass('el-hide').addClass('el-viz');
+	});
+//sticky menu
+$(document).ready(function(){
+
+        var $menu = $("#header-nav");
+
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 100 && $menu.hasClass("nav-norm") ){
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("nav-norm")
+                           .addClass("nav-sticky transbg")
+                           .fadeIn('fast');
+                });
+            } else if($(this).scrollTop() <= 200 && $menu.hasClass("nav-sticky")) {
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("nav-sticky transbg")
+                           .addClass("nav-norm")
+                           .fadeIn('fast');
+                });
+            }
+        });//scroll
+
+        $menu.hover(
+            function(){
+                if( $(this).hasClass('nav-sticky') ){
+                    $(this).removeClass('transbg');
+                }
+            },
+            function(){
+                if( $(this).hasClass('nav-sticky') ){
+                    $(this).addClass('transbg');
+                }
+            });//hover
+    });//jQuery

@@ -4,6 +4,9 @@
     background-color: $col-I;
     padding: .5em 0;
     min-height: 3.5em;
+    box-shadow: -2px 15px 20px $col-IV;
+    -moz-box-shadow: -2px 15px 20px $col-IV;
+    -webkit-box-shadow: -2px 15px 20px $col-IV;
     [rel="main"] {
 		padding-bottom: 3.5em;
 	}

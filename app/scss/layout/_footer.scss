@@ -90,6 +90,7 @@
         margin-bottom: 1em;
         text-align: right;
     }
+    @include push(.5);
     @include span(3 at 8);
     text-align: center;
     color:$col-III;
@@ -104,7 +105,7 @@
     @include breakpoint ($pad) {
         @include span (full);
     }
-    @include span(3 at 8 last);
+    @include span(2.5 at 8 last);
     list-style: none;
 }
 

@@ -44,7 +44,7 @@
     <?php include 'preloader.php'; ?>
         <div class="site-wrap">
             <!-- HEADER-->
-              <div rel="main" class="header-wrap">
+              <div rel="main" id="header-nav" class="header-wrap nav-norm">
                     <header class="site-header">
                            <div class="logo-wrap">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/logo-w.png" alt="Строительная компания Алькасар">
