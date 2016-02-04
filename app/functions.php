@@ -36,6 +36,11 @@ function my_load_scripts() {
 		wp_register_script( 'jquery-core', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', array(), null, true ); // регистрируем крайнюю версию из гугла
 		add_filter( 'script_loader_src', 'jquery_local_loader', 10, 2 );  // вешаем на загрузку скрипта альтернативный jquery
 		wp_enqueue_script( 'jquery' );
+        
+        wp_register_script('jq172',  '//code.jquery.com/jquery-1.7.2.min.js');
+		wp_enqueue_script( 'jq172' );
+       
+        
         wp_register_script('mod+respond',  get_template_directory_uri().'/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js');
 		wp_enqueue_script( 'mod+respond' );
 		wp_register_script('theme',  get_template_directory_uri().'/js/main.js');

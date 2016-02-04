@@ -11,6 +11,8 @@
     }
     padding: .5em;
     @extend .header-wrap;
+    border-top:solid 2px darken($col-I,5%);
+    border-bottom:none;
 }
 
 .site-footer {
@@ -33,7 +35,9 @@
         display: none;
     }
     @include breakpoint ($pad) {
-        @include span (1 at 1 of (1 1));
+        @include span (1 at 1 of (1 1) first);
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -86,8 +90,9 @@
         display: none;
     }
     @include breakpoint ($pad) {
-        @include span (1 at 2 of (1 1));
-        margin-bottom: 1em;
+        @include span (1 at 2 of (1 1) last);
+        margin: 0;
+        padding: 0;
         text-align: right;
     }
     @include push(.5);
@@ -103,6 +108,7 @@
         @include span (1 of 1);
     }
     @include breakpoint ($pad) {
+        margin-top: 1em;
         @include span (full);
     }
     @include span(2.5 at 8 last);

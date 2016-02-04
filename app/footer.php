@@ -39,6 +39,6 @@
             <?php include 'popup-map.php';?>
         <div class="popup-bg"></div>
        <!-- scripts after-->
-        <?php wp_footer(); ?>             
+        <?php wp_footer(); ?>
     </body>
 </html>

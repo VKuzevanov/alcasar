@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 auto;
     background-color: $col-I;
+    border-bottom:solid 2px darken($col-I,5%);
     padding: .5em 0;
     min-height: 3.5em;
     box-shadow: -2px 15px 20px $col-IV;

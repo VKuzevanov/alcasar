@@ -12,6 +12,7 @@
         padding: .5em;
         background-color: darken($col-I, 5%);
         border-radius: 0;
+        @extend %clearfix;
     }
 }
 .callback-link{
@@ -60,6 +61,8 @@
     }
     &:hover{
         text-decoration: none;
+        background-color: lighten($col-I,5%);
+        border:solid 2px $col-II;
         
         &:before{
             background-color: $col-II;

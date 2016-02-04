@@ -28,11 +28,11 @@
     z-index: 9999;
 }
 .close-popup{
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     position: absolute; 
-    right: -1em;
-    top:-1em;
+    right: -.5em;
+    top:-.5em;
     text-align: center;
     opacity: 0;
     cursor: pointer;
@@ -42,14 +42,14 @@
         content: "\e880";
         font-family:'icon';
         position: relative;
-        font-size: 2em;
+        font-size: 1em;
         cursor: pointer;
         border:solid 1px $col-III;
         background-color: $col-III;
         color: $col-I;
         border-radius: 50%;
-        padding-left:2px;
-        padding-bottom: 2px;
+        padding-left:1px;
+        padding-bottom: 1px;
         @include trans(.3s);;
     }
     &:hover{

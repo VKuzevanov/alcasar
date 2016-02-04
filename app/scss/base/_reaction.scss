@@ -25,3 +25,27 @@ div.el-viz{
 .transbg{
     background-color: $col-pop;
 }
+
+.el-active{
+    
+    display: block;
+}
+.menu-item{
+    ul{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        @include trans(.3s);
+    }
+}
+.el-hover{
+
+    ul{
+
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        position: absolute;
+
+    }
+}
