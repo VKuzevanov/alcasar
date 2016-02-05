@@ -46,6 +46,9 @@ div.el-viz{
         visibility: visible;
         display: block;
         position: absolute;
+        @include breakpoint ($mp){
+            position: static;
+        }
 
     }
 }

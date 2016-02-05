@@ -1,4 +1,6 @@
 .header-wrap{
+//    position: relative;
+    z-index: 99999;
     width: 100%;
     margin: 0 auto;
     background-color: $col-I;

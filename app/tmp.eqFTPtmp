@@ -114,7 +114,7 @@
     &:after {
         @include breakpoint($mp) {
             float: right;
-            margin-right: 1em;
+            margin-right: 1.5em;
             margin-top: -.2em;
         }
         
@@ -129,6 +129,8 @@
         
         border: solid 1px lighten($col-I, 20%);
         
+       // visibility: hidden;
+       // display: none;
     }
     
     &:hover {
@@ -167,19 +169,26 @@
    
     &:before {
         position: relative;
+//        float: right;
+//        margin-top: .9em;
         content: "\e888";
-        font-family: 'icon';
-        font-size: 1.1em;
-        @include breakpoint($mp) {
-            font-size: 1.2em;
-            float: right;
-            margin-right: 1em;
-
+//        visibility: visible;
+//        background-color: $col-I;
+//        color: $col-III;
+//        font-family: 'icon';
+        font-size: 1.2em;
+        
+//        margin-right: 1.5em;
+        
+        @include breakpoint(790px 1084px) {
+            font-size: 1em;
+            margin-right: 3em;
         }
     }
     
     &:hover:before {
         margin: 0;
+        display: none;
         -webkit-animation: bigToSmall 100ms ease;
         -moz-animation: bigToSmall 100ms ease;
         -ms-animation: bigToSmall 100ms ease;
@@ -210,18 +219,29 @@
 }
 
 .sub-menu > .sub-menu-item > a {
-    display: block;
-    position: relative;
-    text-align: left;
-    padding: 1em;
-    font-size: 1em;
+    
+    @include breakpoint ($mob) {
+        padding: 1em 1.5em .8em;
+    }
+    
+    @include breakpoint ($pad) {
+        padding: 1em 1.5em .8em;
+    }
+    
     border-radius: 3px;
     border: solid 2px lighten($col-I, 10%);
+    z-index: 100;
+    position: relative;
     color: $col-III;
     background-color: lighten($col-I, 5%);
     text-decoration: none;
-    z-index:100;
+    display: block;
+    padding: .5em 1em;
     @include trans(.3s);
+    font-size: 1.1em;
+    text-align: left;
+    
+    z-index:100;
    
     &:before {
         font-family: 'icon';

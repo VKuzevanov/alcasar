@@ -1,7 +1,7 @@
 <?php
 /**
 * Page
-*
+* Template Name: Contacts page
 * @package WordPress
 * @subpackage Alcasar
 */
@@ -14,7 +14,6 @@
 				<!-- content -->
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-						<h1 class="post_title"><?php the_title(); ?></h1>
 						<section class="post_entry">
 							<?php the_content('Подробнее', 'true'); ?>
 						</section>

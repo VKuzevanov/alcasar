@@ -12,7 +12,6 @@
         padding: .5em;
         background-color: darken($col-I, 5%);
         border-radius: 0;
-        @extend %clearfix;
     }
 }
 .callback-link{
@@ -61,8 +60,6 @@
     }
     &:hover{
         text-decoration: none;
-        background-color: lighten($col-I,5%);
-        border:solid 2px $col-II;
         
         &:before{
             background-color: $col-II;
@@ -107,6 +104,9 @@
     -ms-transition: opacity .5s, top .5s;
     -o-transition: opacity .5s, top .5s;
     transition: opacity .5s, top .5s;
+    @include breakpoint($mob){
+        width: 90%;
+    }
 }
 
 .callback-info{
@@ -120,23 +120,55 @@
 .callback-remark{
         
     background-color: lighten($col-I, 10%);
-        display: block;
-        color:$col-III;
-        padding: 1.5em;
-        font-size: .9em;
-        font-family: 'e-l-reg';
-    text-align: center;
+    display: block;
+    color:$col-III;
+    padding: 1.5em;
+    margin-bottom: 2em; 
+    font-size: .9em;
+    font-family: 'e-l-reg';
+     text-align: center;
     }
 .wpcf7-form-control-wrap {
-    margin: .2em auto;
+    margin: 1em auto;
     display: block;
     text-align: center;
+    input,textarea{
+        width: 80%;
+        margin: 1em auto;
+        display: block;
+    }
 }
 .wpcf7-submit{
     display: block;
     width: 80%;
-    padding: 0;
+    padding: 1em 0;
     margin: 0 auto 1em;
     background-color: $col-I;
     color: $col-III;
+    &:hover{
+      background-color: lighten($col-I,5%);  
+    }
+    &:focus{
+        background-color: $col-I;
+        color: $col-III;
+    }
+}
+.ajax-loader{
+    display: block;
+    margin: 0 auto;
+}
+span.wpcf7-not-valid-tip{
+    width: 80%;
+    margin: .5em auto;
+    background-color: rgba(255, 0, 0, 0.6);
+    padding: .5em;
+    color: $col-I;
+    border-radius: 3px;
+    border: solid 2px darken($col-I,5%);
+}
+div.wpcf7-validation-errors{
+    width: 80%;
+    margin: .5em auto 1em;
+    display: block;
+    text-align: center;
 }

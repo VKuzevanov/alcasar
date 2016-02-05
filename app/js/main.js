@@ -6,9 +6,9 @@ $(window).load(function() {
 
 $(document).ready(function() {
     $(".menu-list li").hover(function() {
-        $(".sub-menu", this).slideDown(300)
+        $(".sub-menu", this).slideDown(500)
     }, function() {
-        $(".sub-menu", this).slideUp(300)
+        $(".sub-menu", this).slideUp(500)
     })
 });
 
@@ -44,11 +44,11 @@ var adjustMenu = function() {
 		} else {
 			$("#hero-nav").show();
 		}
-		$("#hero-navv li").unbind('mouseenter mouseleave');
+		$("#hero-nav li").unbind('mouseenter mouseleave');
 		$("#hero-nav li a.parent-li").unbind('click').bind('click', function(e) {
 			// must be attached to anchor element to prevent bubbling
 			e.preventDefault();
-			$(this).parent-li("li").toggleClass("el-hover");
+			$(this).parent("parent-li").toggleClass("el-hover");
 		});
 	} 
 	else if (ww >= 768) {
@@ -82,30 +82,19 @@ $(document).ready(function(){
         var $menu = $("#header-nav");
 
         $(window).scroll(function(){
-            if ( $(this).scrollTop() > 100 && $menu.hasClass("nav-norm") ){
+            if ( $(this).scrollTop() > 50 && $menu.hasClass("nav-norm") ){
                 $menu.fadeOut('fast',function(){
                     $(this).removeClass("nav-norm")
-                           .addClass("nav-sticky transbg")
+                           .addClass("nav-sticky")
                            .fadeIn('fast');
                 });
             } else if($(this).scrollTop() <= 200 && $menu.hasClass("nav-sticky")) {
                 $menu.fadeOut('fast',function(){
-                    $(this).removeClass("nav-sticky transbg")
+                    $(this).removeClass("nav-sticky")
                            .addClass("nav-norm")
                            .fadeIn('fast');
                 });
             }
         });//scroll
 
-        $menu.hover(
-            function(){
-                if( $(this).hasClass('nav-sticky') ){
-                    $(this).removeClass('transbg');
-                }
-            },
-            function(){
-                if( $(this).hasClass('nav-sticky') ){
-                    $(this).addClass('transbg');
-                }
-            });//hover
     });//jQuery
